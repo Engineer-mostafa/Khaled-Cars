@@ -4,7 +4,7 @@ import 'package:khaledcars/stateful/sginIn_screen.dart';
 
 //screens
 import 'stateless/splash_screen.dart';
-
+import 'stateful/details_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: "Cocon"),
       debugShowCheckedModeBanner: false,
-      home: SignInScreen(),
+      home: DetailsScreen(),
     );
   }
 }
