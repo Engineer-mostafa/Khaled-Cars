@@ -10,13 +10,16 @@ class CustomInputField extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+    return TextField(
+
       decoration: InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(mdq)),
+          contentPadding: new EdgeInsets.symmetric(vertical: 9, horizontal: 50.0),
+
+          border: OutlineInputBorder(),
           hintText: hintText,
           hintStyle: TextStyle(
             color: hintStyleColor,
-            fontSize: 30,
+            fontSize: 24,
           ),
           fillColor: Colors.white),
     );
