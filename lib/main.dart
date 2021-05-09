@@ -1,10 +1,9 @@
 //packages
 import 'package:flutter/material.dart';
-import 'package:khaledcars/stateful/sginIn_screen.dart';
+import 'package:khaledcars/stateful/details_screen.dart';
 
 //screens
-import 'stateless/splash_screen.dart';
-import 'stateful/details_screen.dart';
+import 'stateful/splash_screen.dart';
 void main() {
   runApp(MyApp());
 }

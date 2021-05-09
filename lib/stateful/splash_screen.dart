@@ -1,9 +1,26 @@
 //packages
 import 'package:flutter/material.dart';
+import 'sginIn_screen.dart';
+import 'dart:async';
 
 //screens
 
-class MySplashScreen extends StatelessWidget {
+class MySplashScreen extends StatefulWidget {
+  @override
+  _MySplashScreenState createState() => _MySplashScreenState();
+}
+
+class _MySplashScreenState extends State<MySplashScreen> {
+
+  @override
+  void initState() {
+    Timer(Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_)=>SignInScreen()));
+    });
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     final mdq = MediaQuery.of(context).size;
