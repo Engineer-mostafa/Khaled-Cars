@@ -435,11 +435,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 GestureDetector(
                                     onTap: () {
                                       setState(() {
+                                        // _centerpageController.animateToPage(0,
+                                        //   duration: Duration(milliseconds: 500),
+                                        //   curve: Curves.fastOutSlowIn,
+                                        // );
                                         _centercurrentPageNotifier.value = 0;
-                                        _centerpageController.animateToPage(0,
-                                          duration: Duration(milliseconds: 500),
-                                          curve: Curves.fastOutSlowIn,
-                                        );
+
                                         print(_centercurrentPageNotifier.value);
                                       });
                                     },
@@ -457,11 +458,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 GestureDetector(
                                   onTap: () {
                                     setState(() {
+                                      // _centerpageController.animateToPage(1,
+                                      //   duration: Duration(milliseconds: 500),
+                                      //   curve: Curves.fastOutSlowIn,
+                                      // );
                                       _centercurrentPageNotifier.value = 1;
-                                      _centerpageController.animateToPage(1,
-                                        duration: Duration(milliseconds: 500),
-                                        curve: Curves.fastOutSlowIn,
-                                      );
+
                                       print(_centercurrentPageNotifier.value);
                                     });
                                   },
@@ -480,11 +482,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 GestureDetector(
                                   onTap: () {
                                     setState(() {
+                                      // _centerpageController.animateToPage(2,
+                                      //   duration: Duration(milliseconds: 500),
+                                      //   curve: Curves.fastOutSlowIn,
+                                      // );
                                       _centercurrentPageNotifier.value = 2;
-                                      _centerpageController.animateToPage(2,
-                                        duration: Duration(milliseconds: 500),
-                                        curve: Curves.fastOutSlowIn,
-                                      );
+
                                       print(_centercurrentPageNotifier.value);
                                     });
                                   },
@@ -505,7 +508,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             child: Stack(
                               children: [
                                 AnimatedPositioned(
-                                  duration: Duration(milliseconds: 500),
+                                  duration: Duration(milliseconds: 300),
                                   right: cp == 0
                                       ? mdq.width / 6.5
                                       : cp == 2
@@ -536,21 +539,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           FloatingContainer(
                             height: 1,
                             width: 2,
-                            child: PageView.builder(
-                              itemCount: 3,
-                              itemBuilder: (_, i) =>
-                                  Container(
-                                    //color: Colors.yellow,
-                                    height: 50,
-                                    child:widgets[i],
-                                  ),
-                              controller: _centerpageController,
-                              onPageChanged: (int index) {
-                                setState(() {
-                                  _centercurrentPageNotifier.value = index;
-                                });
-                              },
-                            ),
+                            child: widgets[_centercurrentPageNotifier.value]
                           ),
                         ],
                       ),
