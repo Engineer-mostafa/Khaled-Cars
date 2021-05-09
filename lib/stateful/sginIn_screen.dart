@@ -81,16 +81,14 @@ class _SignInScreenState extends State<SignInScreen> {
                             child: Directionality(
                               textDirection: TextDirection.ltr,
                               child: TextFormField(
-
+                                  keyboardType: TextInputType.phone,
                                 decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.fromLTRB(20.0, -mdq.height/22, 0.0, -0),
+                                  contentPadding: EdgeInsets.fromLTRB(0.0, -mdq.height/21.5, mdq.width/20,0),
 
                                   hintText: "رقم الجوال",
                                   hintTextDirection: TextDirection.rtl,
-                                  hintStyle: TextStyle(fontSize: 25 , color: Colors.black26 ),
+                                  hintStyle: TextStyle(fontSize: mdq.width/15 , color: Colors.black26 ),
                                     prefixIcon: CountryCodePicker(
-
-
                                         padding: EdgeInsets.zero,
                                           initialSelection: 'SD',
                                           searchDecoration: InputDecoration(
@@ -125,11 +123,11 @@ class _SignInScreenState extends State<SignInScreen> {
                           child: Padding(
                             padding: const EdgeInsets.only(left:15.0 , right: 15.0),
                             child: TextFormField(
+                              obscureText: true,
                               decoration: InputDecoration(
-                                contentPadding: EdgeInsets.fromLTRB(20.0, -mdq.height/22, 20.0,0),
-
+                                contentPadding: EdgeInsets.fromLTRB(0.0, -mdq.height/21.5, mdq.width/20,0),
                                 hintText: "كلمه المرور",
-                                hintStyle: TextStyle(fontSize: 25 , color: Colors.black26 ),
+                                hintStyle: TextStyle(fontSize: mdq.width/15  , color: Colors.black26 ),
 
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(mdq.width/35),
